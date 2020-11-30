@@ -13,7 +13,7 @@ import sys
 import glob
 import argparse
 import threading
-import six.moves.queue as Queue # pylint: disable=import-error
+#import six.moves.queue as Queue # pylint: disable=import-error
 import traceback
 import numpy as np
 import tensorflow as tf
