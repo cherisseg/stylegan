@@ -63,12 +63,12 @@ if 1:
     #desc += '-add-mapping-and-styles'; G.const_input_layer = False; G.style_mixing_prob = 0.0; G.use_noise = False
     #desc += '-remove-traditional-input'; G.style_mixing_prob = 0.0; G.use_noise = False
     #desc += '-add-noise-inputs'; G.style_mixing_prob = 0.0
-    #desc += '-mixing-regularization' # default
+    desc += '-mixing-regularization' # default
 
     # Table 2.
     #desc += '-mix0'; G.style_mixing_prob = 0.0
     #desc += '-mix50'; G.style_mixing_prob = 0.5
-    #desc += '-mix90'; G.style_mixing_prob = 0.9 # default
+    desc += '-mix90'; G.style_mixing_prob = 0.9 # default
     #desc += '-mix100'; G.style_mixing_prob = 1.0
 
     # Table 4.
@@ -77,7 +77,7 @@ if 1:
     #desc += '-stylebased-0'; G.mapping_layers = 0
     #desc += '-stylebased-1'; G.mapping_layers = 1
     #desc += '-stylebased-2'; G.mapping_layers = 2
-    #desc += '-stylebased-8'; G.mapping_layers = 8 # default
+    desc += '-stylebased-8'; G.mapping_layers = 8 # default
 
 #----------------------------------------------------------------------------
 # Official training configs for Progressive GAN, targeted mainly for CelebA-HQ.
