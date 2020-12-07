@@ -37,7 +37,7 @@ def main():
     dnnlib.submission.submit.set_user_name_override(submit_config.user_name)
 
     submit_config.task_name = task_name
-    submit_config.host_name = lengau.chpc.ac.za                   #host_name
+    submit_config.host_name = host_name
 
     dnnlib.submission.submit.run_wrapper(submit_config)
 
