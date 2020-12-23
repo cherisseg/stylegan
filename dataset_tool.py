@@ -507,8 +507,8 @@ def create_from_images(tfrecord_dir, image_dir, shuffle):
         error('No input images found')
 
     img = np.asarray(PIL.Image.open(image_filenames[0]))
-    resolution = 1024 #img.shape[0]
-    channels = 3 #img.shape[2] if img.ndim == 3 else 1
+    resolution = img.shape[0]
+    channels = img.shape[2] if img.ndim == 3 else 1
     if img.shape[1] != resolution:
         error('Input images must have the same width and height')
     if resolution != 2 ** int(np.floor(np.log2(resolution))):
