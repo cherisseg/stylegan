@@ -35,9 +35,9 @@ if 1:
 
     # Dataset.
     #desc += '-chairs_1024';     dataset = EasyDict(tfrecord_dir='chairs_1024', resolution=1024);                 train.mirror_augment = False
-    #desc += '-chairs_128';     dataset = EasyDict(tfrecord_dir='chairs_128', resolution=128); train.mirror_augment = False
+    desc += '-chairs_256';     dataset = EasyDict(tfrecord_dir='chairs_256', resolution=256); train.mirror_augment = False
     #desc += '-ffhq_128'; dataset = EasyDict(tfrecord_dir='ffhq_128', resolution=128); train.mirror_augment = False
-    desc += '-ffhq_128raw'; dataset = EasyDict(tfrecord_dir='ffhq_128raw', resolution=128); train.mirror_augment = False
+    #desc += '-ffhq_128raw'; dataset = EasyDict(tfrecord_dir='ffhq_128raw', resolution=128); train.mirror_augment = False
     #desc += '-ffhq';     dataset = EasyDict(tfrecord_dir='ffhq');                 train.mirror_augment = True
     #desc += '-ffhq512';  dataset = EasyDict(tfrecord_dir='ffhq', resolution=512); train.mirror_augment = True
     #desc += '-ffhq256';  dataset = EasyDict(tfrecord_dir='ffhq', resolution=256); train.mirror_augment = True
