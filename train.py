@@ -35,7 +35,8 @@ if 1:
 
     # Dataset.
     #desc += '-chairs_1024';     dataset = EasyDict(tfrecord_dir='chairs_1024', resolution=1024);                 train.mirror_augment = False
-    desc += '-chairs_256';     dataset = EasyDict(tfrecord_dir='chairs_256', resolution=256); train.mirror_augment = False
+    desc += '-chairs_128';     dataset = EasyDict(tfrecord_dir='chairs_128', resolution=128); train.mirror_augment = False
+    #desc += '-chairs_256';     dataset = EasyDict(tfrecord_dir='chairs_256', resolution=256); train.mirror_augment = False
     #desc += '-tables_128';     dataset = EasyDict(tfrecord_dir='chairs_128', resolution=128); train.mirror_augment = False
     #desc += '-ffhq_128'; dataset = EasyDict(tfrecord_dir='ffhq_128', resolution=128); train.mirror_augment = False
     #desc += '-ffhq_128raw'; dataset = EasyDict(tfrecord_dir='ffhq_128raw', resolution=128); train.mirror_augment = False
@@ -54,7 +55,7 @@ if 1:
     #desc += '-8gpu'; submit_config.num_gpus = 8; sched.minibatch_base = 32; sched.minibatch_dict = {4: 512, 8: 256, 16: 128, 32: 64, 64: 32}
 
     # Default options.
-    train.total_kimg =6500        #25000
+    train.total_kimg =15000        #25000
     sched.lod_initial_resolution = 8
     sched.G_lrate_dict = {128: 0.0015, 256: 0.002, 512: 0.003, 1024: 0.003}
     sched.D_lrate_dict = EasyDict(sched.G_lrate_dict)
