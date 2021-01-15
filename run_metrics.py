@@ -64,7 +64,7 @@ def main():
 
     # Which metrics to evaluate?
     metrics = []
-    metrics += [metric_base.fid50k]
+    metrics += [metric_base.fid5k]
     #metrics += [metric_base.ppl_zfull]
     #metrics += [metric_base.ppl_wfull]
     #metrics += [metric_base.ppl_zend]
