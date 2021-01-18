@@ -15,7 +15,7 @@ result_dir = 'results/baseline/tables'
 #result_dir = 'results/baseline/lamps'
 #result_dir = 'results/baseline/cars'
 #result_dir = 'results/baseline/combined'
-#data_dir = 'datasets'
+data_dir = 'datasets'
 cache_dir = 'cache'
 run_dir_ignore = ['results', 'datasets', 'cache']
 
