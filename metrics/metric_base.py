@@ -22,7 +22,7 @@ from training import dataset
 #----------------------------------------------------------------------------
 # Standard metrics.
 
-fid5k = dnnlib.EasyDict(func_name='metrics.frechet_inception_distance.FID', name='fid5k', num_images=6750, minibatch_per_gpu=8)
+fid5k = dnnlib.EasyDict(func_name='metrics.frechet_inception_distance.FID', name='fid2k', num_images=2000, minibatch_per_gpu=8)
 ppl_zfull = dnnlib.EasyDict(func_name='metrics.perceptual_path_length.PPL', name='ppl_zfull', num_samples=100000, epsilon=1e-4, space='z', sampling='full', minibatch_per_gpu=16)
 ppl_wfull = dnnlib.EasyDict(func_name='metrics.perceptual_path_length.PPL', name='ppl_wfull', num_samples=100000, epsilon=1e-4, space='w', sampling='full', minibatch_per_gpu=16)
 ppl_zend = dnnlib.EasyDict(func_name='metrics.perceptual_path_length.PPL', name='ppl_zend', num_samples=100000, epsilon=1e-4, space='z', sampling='end', minibatch_per_gpu=16)
