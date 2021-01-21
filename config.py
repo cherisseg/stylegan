@@ -10,9 +10,9 @@
 #----------------------------------------------------------------------------
 # Paths.
 
-result_dir = 'results/baseline/chairs'
+#result_dir = 'results/baseline/chairs'
 #result_dir = 'results/baseline/tables'
-#result_dir = 'results/baseline/lamps'
+result_dir = 'results/baseline/lamps'
 #result_dir = 'results/baseline/cars'
 #result_dir = 'results/baseline/combined'
 data_dir = 'datasets'
