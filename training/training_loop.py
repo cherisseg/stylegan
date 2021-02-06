@@ -135,7 +135,7 @@ def training_loop(
     save_weight_histograms  = False,    # Include weight histograms in the tfevents file?
     resume_run_id           = 0,     # Run ID or network pkl to resume training from, None = start from scratch.
     resume_snapshot         = 5306  ,     # Snapshot index to resume training from, None = autodetect.
-    resume_kimg             = 5306 .1,      # Assumed training progress at the beginning. Affects reporting and training schedule.
+    resume_kimg             = 5306.1,      # Assumed training progress at the beginning. Affects reporting and training schedule.
     resume_time             = 0.0):     # Assumed wallclock time at the beginning. Affects reporting.
 
     # Initialize dnnlib and TensorFlow.
