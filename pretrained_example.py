@@ -20,9 +20,13 @@ def main():
     tflib.init_tf()
 
     # Load pre-trained network.
-    url = 'https://drive.google.com/uc?id=1MEGjdvVpUsu1jB4zrXZN7Y4kBBOzizDQ' # karras2019stylegan-ffhq-1024x1024.pkl
-    with dnnlib.util.open_url(url, cache_dir=config.cache_dir) as f:
+    stylegan_network='/mnt/lustre/users/cgovender/results/baseline/chairs/00002-sgan-chairs_128-2gpu-mixing-regularization-mix90-stylebased-8/network-snapshot-006866.pkl'
+    with open(stylegan_network, "rb") as f:
         _G, _D, Gs = pickle.load(f)
+   
+    #url = 'https://drive.google.com/uc?id=1MEGjdvVpUsu1jB4zrXZN7Y4kBBOzizDQ' # karras2019stylegan-ffhq-1024x1024.pkl
+    #with dnnlib.util.open_url(url, cache_dir=config.cache_dir) as f:
+       # _G, _D, Gs = pickle.load(f)
         # _G = Instantaneous snapshot of the generator. Mainly useful for resuming a previous training run.
         # _D = Instantaneous snapshot of the discriminator. Mainly useful for resuming a previous training run.
         # Gs = Long-term average of the generator. Yields higher-quality results than the instantaneous snapshot.
@@ -36,7 +40,7 @@ def main():
 
     # Generate image.
     fmt = dict(func=tflib.convert_images_to_uint8, nchw_to_nhwc=True)
-    images = Gs.run(latents, None, truncation_psi=0.7, randomize_noise=True, output_transform=fmt)
+    images = Gs.run(latents, None, truncation_psi=1, randomize_noise=True, output_transform=fmt)# trunc=0.7
 
     # Save image.
     os.makedirs(config.result_dir, exist_ok=True)
