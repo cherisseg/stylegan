@@ -10,7 +10,7 @@
 #----------------------------------------------------------------------------
 # Paths.
 
-result_dir = 'results/baseline/chairs_losses'
+result_dir = 'results/baseline'
 #result_dir = 'results/baseline/tables'
 #result_dir = 'results/baseline/lamps'
 #result_dir = 'results/baseline/cars'
