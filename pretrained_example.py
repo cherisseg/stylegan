@@ -35,8 +35,8 @@ def main():
     Gs.print_layers()
 
     # Pick latent vector.
-    rnd = np.random.RandomState(3000)
-    latents = rnd.randn(10, Gs.input_shape[1])
+    rnd = np.random.RandomState(3500)
+    latents = rnd.randn(1, Gs.input_shape[1])
 
     # Generate image.
     fmt = dict(func=tflib.convert_images_to_uint8, nchw_to_nhwc=True)
