@@ -20,7 +20,8 @@ def main():
     tflib.init_tf()
 
     # Load pre-trained network.
-    stylegan_network='/mnt/lustre/users/cgovender/results/baseline/chairs/00002-sgan-chairs_128-2gpu-mixing-regularization-mix90-stylebased-8/network-snapshot-006866.pkl'
+    #stylegan_network='/mnt/lustre/users/cgovender/results/baseline/chairs/00002-sgan-chairs_128-2gpu-mixing-regularization-mix90-stylebased-8/network-snapshot-006866.pkl'
+    stylegan_network= '/mnt/lustre/users/cgovender/results/baseline/chairs/00006-sgan-chairs_128-2gpu-mixing-regularization-mix90-stylebased-8/network-snapshot-015000.pkl'
     with open(stylegan_network, "rb") as f:
         _G, _D, Gs = pickle.load(f)
    
@@ -35,7 +36,7 @@ def main():
     Gs.print_layers()
 
     # Pick latent vector.
-    rnd = np.random.RandomState(40000)
+    rnd = np.random.RandomState(50)
     latents = rnd.randn(1, Gs.input_shape[1])
 
     # Generate image.
