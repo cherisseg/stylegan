@@ -45,7 +45,7 @@ def main():
 
     # Save image.
     os.makedirs(config.result_dir, exist_ok=True)
-    png_filename = os.path.join(config.result_dir, 'truncation1_no_noise')
+    png_filename = os.path.join(config.result_dir, 'truncation1_no_noise.png')
     PIL.Image.fromarray(images[0], 'RGB').save(png_filename)
 
 if __name__ == "__main__":
