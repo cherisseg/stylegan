@@ -41,7 +41,7 @@ def main():
 
     # Generate image.
     fmt = dict(func=tflib.convert_images_to_uint8, nchw_to_nhwc=True)
-    images = Gs.run(latents, None, truncation_psi=0.3, randomize_noise=True, output_transform=fmt)# trunc=0.7
+    images = Gs.run(latents, None, truncation_psi=1, randomize_noise=False, output_transform=fmt)# trunc=0.7
 
     # Save image.
     os.makedirs(config.result_dir, exist_ok=True)
