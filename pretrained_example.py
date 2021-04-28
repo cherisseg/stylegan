@@ -41,11 +41,11 @@ def main():
 
     # Generate image.
     fmt = dict(func=tflib.convert_images_to_uint8, nchw_to_nhwc=True)
-    images = Gs.run(latents, None, truncation_psi=0, randomize_noise=True, output_transform=fmt)# trunc=0.7
+    images = Gs.run(latents, None, truncation_psi=0, randomize_noise=False, output_transform=fmt)# trunc=0.7
 
     # Save image.
     os.makedirs(config.result_dir, exist_ok=True)
-    png_filename = os.path.join(config.result_dir, 'truncation0_noise.png')
+    png_filename = os.path.join(config.result_dir, 'truncation0_no_noise.png')
     PIL.Image.fromarray(images[0], 'RGB').save(png_filename)
 
 if __name__ == "__main__":
