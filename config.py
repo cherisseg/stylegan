@@ -10,7 +10,7 @@
 #----------------------------------------------------------------------------
 # Paths.
 
-result_dir = 'results/baseline/chairs_edited'
+result_dir = 'results/baseline/chairs_lr0.001'
 #result_dir = 'results/baseline/tables'
 #result_dir = 'results/baseline/lamps'
 #result_dir = 'results/baseline/cars'
